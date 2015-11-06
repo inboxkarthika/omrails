@@ -1,11 +1,15 @@
-<h1>Welcome to onga veetu soru</h1>
-<p>
-	You find all the possible soru u can right here.
-	<a href = "http://www.yahoo.com"> get them now</a>
-	<%= link_to "One plate Food", "http://www.yahoo.com" %>
-</p>
-<p>
-	<a href="#">Sign up now</a>
-	<%= link_to "I want a plate", "#" %>
-</p>
+<% if user_signed_in? %>
+	are you ready for the party
+	<% else %>
 
+	<h1>Welcome to onga veetu soru</h1>
+	<p>
+		You find all the possible soru u can right here.
+		<%= link_to "One plate Food now. I have a plate", new_user_session_path %>
+	</p>
+	<p>
+		<%= link_to "I want a new plate", new_user_registration_path %>
+		<!--<%= link_to "I'm done eating", cancel_user_registration_path %>-->
+	</p>
+
+	<% end %>

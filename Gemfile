@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5.rc1'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'devise'
+gem 'simple_form'
+
 group :production do
 	gem 'pg'
 end
